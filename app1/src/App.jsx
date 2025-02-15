@@ -44,7 +44,9 @@ function App() {
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
       </div>
-      <h1>IMAGE GENERATOR</h1>
+      <h1>COMIC AI GENERATOR</h1>
+      <h2>Bring your thoughts to life...Powered By GenAI</h2>
+      <h3>Bought to you by Nomad Hackers</h3>
       <div>
         <input type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} placeholder="Enter a prompt..." />
         <button onClick={generateImage}>Generate</button>
