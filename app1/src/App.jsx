@@ -18,21 +18,26 @@ const response = await axios.postForm(
     validateStatus: undefined,
     responseType: "arraybuffer",
     headers: { 
-      Authorization: `Bearer sk-MYAPIKEY`, 
+      Authorization: `Bearer sk-elATeOhmDHdnKPsj3ugkTMAMuhp1alnJompkL36lCl8UsY9E`, 
       Accept: "image/*" 
     },
   },
 );
 
-// if(response.status === 200) {
-//   fs.writeFileSync("./lighthouse.webp", Buffer.from(response.data));
-// } else {
-//   throw new Error(`${response.status}: ${response.data.toString()}`);
-// }
+
 
 function App() {
   const [prompt, setPrompt] = useState("");
   const [image, setImage] = useState("");
+
+  const foo = () => {
+    if(response.status === 200) {
+      fs.writeFileSync("./testing.webp", Buffer.from(response.data));
+    } else {
+      throw new Error(`Oops! ${response.status}: ${response.data.toString()}`);
+    }
+    console.log("foo");
+  }
 
   const generateImage = async () => {
     const response = await axios.post(
