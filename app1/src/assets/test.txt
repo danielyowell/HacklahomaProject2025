@@ -1,0 +1,31 @@
+import { useState } from "react";
+import { Button, Input } from "@/components/ui";
+
+export default function App() {
+  const [input, setInput] = useState("");
+  const [image, setImage] = useState(null);
+
+  const handleGenerate = async () => {
+    if (!input) return;
+    // Simulate an API call to generate an image
+    const generatedImage = `https://via.placeholder.com/400x300.png?text=${encodeURIComponent(input)}`;
+    setImage(generatedImage);
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen p-4">
+      <h1 className="text-2xl font-bold mb-4">Image Generator</h1>
+      <Input
+        type="text"
+        placeholder="Enter a prompt"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+        className="mb-4"
+      />
+      <Button onClick={handleGenerate} className="mb-4">
+        Generate Image
+      </Button>
+      {image && <img src={image} alt="Generated" className="mt-4 rounded-lg shadow" />}
+    </div>
+  );
+}
