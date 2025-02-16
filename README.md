@@ -1,6 +1,8 @@
 # Comic Generator
 
-This project is a Comic Generator application built with React and Vite. It allows users to generate images based on text prompts using the Stability AI API and connect to a web3 wallet.
+Welcome to COMIC.AI, the one and only comic ai app to help you tell your story with confidence in a fun and easy way. All you have to do is input your prompts and voila you will have your life in a comic.
+
+Here is our domain name: livelifetokenize.tech/,
 
 ## Table of Contents
 
