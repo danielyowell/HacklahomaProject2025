@@ -107,7 +107,7 @@ function App() {
       <h2>Bring your ideas to life with Comic.AI!</h2><h4>(pronounced "comical")</h4>
       <h3>Enter your keywords into the text box below and press GENERATE</h3>
       <div>
-        <input class="input" type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} placeholder="Enter a prompt..." />
+        <input className="input" type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} placeholder="Enter a prompt..." />
       </div>
       <br></br>
       <div>

@@ -22,11 +22,10 @@ app.post('/generate', async (req, res) => {
     });
 
     res.json({ image: response.data.image });
-  //   console.log("DY: generate image");
-  //   res.json({ message: {prompt} });
-  // } catch (error) {
-  //   res.status(500).json({ error: 'Failed to generate image' });
-  // }
+  } catch (error) {
+    console.error('DY: Error generating image:', error);
+    res.status(500).json({ error: 'DY: Failed to generate image' });
+  }
 });
 
 app.listen(port, () => {
