@@ -3,6 +3,7 @@ const axios = require('axios');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
+const path = require('path');
 const port = 3001;
 
 app.use(bodyParser.json());
@@ -16,19 +17,13 @@ app.post('/generate', async (req, res) => {
   const { prompt } = req.body;
 
   try {
-    // Replace with your Colab API endpoint and parameters
-    const response = await axios.post('https://colab-api-endpoint', {
-      prompt: prompt,
-    });
-
-    res.json({ image: response.data.image });
-  //   console.log("DY: generate image");
-  //   res.json({ message: {prompt} });
-  // } catch (error) {
-  //   res.status(500).json({ error: 'Failed to generate image' });
-  // }
+    res.json({ pdf_url: `http://localhost:${port}/generated_comics/AI_Comic_Book-6.pdf` });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to generate image' });
+  }
 });
 
+app.use('/generated_comics', express.static(path.join(__dirname, 'generated_comics')));
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });

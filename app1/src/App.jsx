@@ -61,7 +61,7 @@ function App() {
     try {
       const response = await axios.post('http://localhost:3001/generate', {prompt});
       console.log(response)
-      setImage(response.data.message.prompt);
+      setImage(response.data.pdf_url);
     } catch (error) {
       console.error('Error generating image:', error);
     }
@@ -114,7 +114,7 @@ function App() {
         <button onClick={generateImage1}>GENERATE</button>
       </div>
       <div>
-        {image && <div>{image}</div>}
+      {image && <a href={image} target="_blank" rel="noopener noreferrer">Download PDF</a>}
       </div>
     </>
   )
