@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/logo.svg'
 import './App.css'
 import fs from "node:fs";
-import axios from "axios";
+import axios from 'axios';
 import FormData from "form-data";
 import styled from "styled-components";
 
@@ -57,6 +57,16 @@ function App() {
   const [prompt, setPrompt] = useState("");
   const [image, setImage] = useState("");
 
+  const generateImage1 = async () => {
+    try {
+      const response = await axios.post('http://localhost:3001/generate', {prompt});
+      console.log(response)
+      setImage(response.data.message.prompt);
+    } catch (error) {
+      console.error('Error generating image:', error);
+    }
+  };
+
   /* TODO */
   const connectToEthereum = async () => {
     console.log("DY: Connect to Ethereum clicked");
@@ -101,10 +111,10 @@ function App() {
       </div>
       <br></br>
       <div>
-        <button onClick={generateImage}>GENERATE</button>
+        <button onClick={generateImage1}>GENERATE</button>
       </div>
       <div>
-        {image && <img src={image} alt="Generated" />}
+        {image && <div>{image}</div>}
       </div>
     </>
   )
