@@ -17,25 +17,91 @@ This project is a Comic Generator application built with React and Vite. It allo
 
     ```sh
     git clone https://github.com/yourusername/HacklahomaProject2025.git
-    cd HacklahomaProject2025/app1
+    cd HacklahomaProject2025
     ```
 
-2. Install the dependencies:
+2. Install the dependencies for both the frontend and backend:
 
     ```sh
+    cd app1
+    npm install
+    cd ../app1/backend
     npm install
     ```
 
 ## Usage
 
-1. Start the development server:
+### Starting the Frontend
+
+1. Navigate to the frontend directory:
+
+    ```sh
+    cd app1
+    ```
+
+2. Start the development server:
 
     ```sh
     npm run dev
     ```
 
-2. Open your browser and navigate to `http://localhost:3000`.
+3. Open your browser and navigate to `http://localhost:3000`.
 
-3. Enter a prompt in the input field and click the "Generate" button to generate an image.
+4. Enter a prompt in the input field and click the "Generate" button to generate an image.
+
+### Starting the Backend
+
+1. Open a new terminal and navigate to the backend directory:
+
+    ```sh
+    cd HacklahomaProject2025/app1/backend
+    ```
+
+2. Start the backend server:
+
+    ```sh
+    node server.cjs
+    ```
+
+3. The backend server will be running at `http://localhost:3001`.
 
 ## Project Structure
+
+```
+HacklahomaProject2025/
+├── app1/
+│   ├── backend/
+│   │   ├── server.cjs
+│   │   └── ...
+│   ├── src/
+│   │   ├── App.jsx
+│   │   └── ...
+│   ├── public/
+│   │   ├── favicon.ico
+│   │   └── ...
+│   ├── index.html
+│   ├── package.json
+│   └── ...
+├── README.md
+└── ...
+```
+
+## Dependencies
+
+- React
+- Vite
+- Axios
+- Styled-components
+- Express
+- PDFKit
+- Body-parser
+- Cors
+
+## Scripts
+
+- `npm run dev`: Start the development server for the frontend.
+- `node server.cjs`: Start the backend server.
+
+## License
+
+This project is licensed under the MIT License.
