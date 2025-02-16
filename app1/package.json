@@ -15,6 +15,7 @@
     "@babel/register": "^7.25.9",
     "axios": "^1.7.9",
     "babel": "^6.23.0",
+    "ethers": "^6.13.5",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
