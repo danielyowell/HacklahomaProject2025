@@ -12,7 +12,7 @@ console.log("DY: Reloaded page");
 const theme = {
   blue: {
     default: "#8d6f3c",
-    hover: "644f2b",
+    hover: "#644f2b",
   },
   // pink: {
   //   default: "#e91e63",
@@ -28,6 +28,9 @@ const Button2 = styled.button`
   outline: 0;
   border: 0; 
   text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
   margin: 10px 0px;
   cursor: pointer;
   box-shadow: 0px 2px 2px black;
@@ -92,13 +95,13 @@ function App() {
       </div>
       {/* <h1>COMIC AI GENERATOR</h1> */}
       <h2>Bring your ideas to life with Comic.AI!</h2><h4>(pronounced "comical")</h4>
-      <h3>Enter your keywords into the text box below and press Generate</h3>
+      <h3>Enter your keywords into the text box below and press GENERATE</h3>
       <div>
-        <input type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} placeholder="Enter a prompt..." />
+        <input class="input" type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} placeholder="Enter a prompt..." />
       </div>
       <br></br>
       <div>
-        <button onClick={generateImage}>Generate</button>
+        <button onClick={generateImage}>GENERATE</button>
       </div>
       <div>
         {image && <img src={image} alt="Generated" />}
