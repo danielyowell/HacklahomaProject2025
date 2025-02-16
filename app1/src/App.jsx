@@ -20,6 +20,22 @@ const theme = {
   // },
 };
 
+const StyledLink = styled.a`
+  display: inline-block;
+  background-color: #8d6f3c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 10px 0px;
+  transition: ease background-color 250ms;
+  &:hover {
+    background-color: #644f2b;
+  }
+`;
+
 const Button2 = styled.button`
   background-color: ${(props) => theme[props.theme].default};
   color: white;
@@ -114,7 +130,7 @@ function App() {
         <button onClick={generateImage1}>GENERATE</button>
       </div>
       <div>
-      {image && <a href={image} target="_blank" rel="noopener noreferrer">Download PDF</a>}
+      {image && <StyledLink href={image} target="_blank" rel="noopener noreferrer">Download PDF</StyledLink>}
       </div>
     </>
   )
