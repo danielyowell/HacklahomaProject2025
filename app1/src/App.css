@@ -6,8 +6,8 @@
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 10em;
+  padding: 0em;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -31,7 +31,7 @@
 /*  Spins logo of element 1 (no 0) */
 @media (prefers-reduced-motion: no-preference) {
   a:nth-of-type(1) .logo {
-    animation: logo-spin infinite 10s ease-in-out; /* can be linear or ease-in-out */
+    animation: logo-spin infinite 30s ease-in-out; /* can be linear or ease-in-out*/
   }
 }
 
@@ -41,4 +41,14 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* class name App-Header */
+.App-header {
+  /* background-color: #282c34; */
+  flex-direction: column;
+  align-items: right;
+  justify-content: right;
+  font-size: calc(10px + 2vmin);
+  color: white;
 }
