@@ -5,7 +5,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #1e1713; /*!!!!*/
+  background-image: url(https://www.transparenttextures.com/patterns/asfalt-light.png);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -35,6 +36,29 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+  font-size: 1.8em;
+  line-height: 0;
+}
+
+h3 {
+  font-size: 1.2em;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 0;
+}
+
+header {
+  font-size: .5em;
+  text-align: right;
+  margin: 0.5em 0;
 }
 
 button {
@@ -71,7 +95,7 @@ button:focus-visible {
   }
 }
 footer {
-  background-color: #282c34;
+  background-color: #000000; /*#282c34*/
   color: white;
   padding: 20px;
   text-align: center;
@@ -84,9 +108,13 @@ footer p {
   margin: 5px 0;
 }
 footer a {
-  color: #61dafb;
+  color: #dcc7a4;
   text-decoration: none;
 }
 footer a:hover {
   text-decoration: underline;
+}
+
+html {
+  background-color: black;
 }
